@@ -44,3 +44,25 @@ This work is licensed under a
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+
+
+## Main Features
+
+- Classic Snake gameplay controlled with keyboard arrows or WASD keys
+- Start screen with options to:
+  - Enter player name
+  - Select initial snake speed (slow, medium, fast)
+  - Select difficulty level (based on number of obstacles)
+- Different types of food:
+  - Normal food (yellow) — grows snake by 1 and adds 1 point
+  - Special food (red) — grows snake by 2 and adds 5 points
+  - Speed-up food (pink) — temporarily increases snake speed
+  - Slow-down food (white) — temporarily decreases snake speed
+- Obstacles on the grid that cause game over on collision
+- Pause functionality toggled by pressing `P`
+- Game Over screen rendered on the grid with instructions
+- Pause screen overlay
+- Persistent high score ranking saved in `highscores.txt`
+- Restart game with `R` or quit with `Q` after game over
+
+---
