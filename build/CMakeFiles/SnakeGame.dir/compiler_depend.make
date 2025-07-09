@@ -3,6 +3,8 @@
 
 CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/controller.cpp \
   /home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/controller.h \
+  /home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/game.h \
+  /home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/renderer.h \
   /home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/snake.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_assert.h \
@@ -95,6 +97,8 @@ CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /home/sergillam/development/udaci
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
+  /usr/include/c++/13/bits/random.h \
+  /usr/include/c++/13/bits/random.tcc \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
@@ -107,6 +111,7 @@ CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /home/sergillam/development/udaci
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13/bits/stl_numeric.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
   /usr/include/c++/13/bits/stl_vector.h \
@@ -114,6 +119,7 @@ CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /home/sergillam/development/udaci
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/uniform_int_dist.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
@@ -123,6 +129,7 @@ CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /home/sergillam/development/udaci
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
   /usr/include/c++/13/cwchar \
@@ -143,8 +150,12 @@ CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /home/sergillam/development/udaci
   /usr/include/c++/13/limits \
   /usr/include/c++/13/math.h \
   /usr/include/c++/13/new \
+  /usr/include/c++/13/numeric \
   /usr/include/c++/13/ostream \
+  /usr/include/c++/13/pstl/execution_defs.h \
+  /usr/include/c++/13/pstl/glue_numeric_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/random \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
   /usr/include/c++/13/streambuf \
@@ -269,6 +280,7 @@ CMakeFiles/SnakeGame.dir/src/controller.cpp.o: /home/sergillam/development/udaci
   /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -820,16 +832,22 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: /home/sergillam/development/udacity/Cpp
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/c++/13/atomic \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
   /usr/include/c++/13/bits/alloc_traits.h \
+  /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_futex.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
   /usr/include/c++/13/bits/basic_ios.h \
   /usr/include/c++/13/bits/basic_ios.tcc \
   /usr/include/c++/13/bits/basic_string.h \
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
@@ -855,6 +873,7 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: /home/sergillam/development/udacity/Cpp
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/ostream.tcc \
   /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
@@ -863,8 +882,13 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: /home/sergillam/development/udacity/Cpp
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/shared_ptr.h \
+  /usr/include/c++/13/bits/shared_ptr_base.h \
   /usr/include/c++/13/bits/specfun.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_function.h \
+  /usr/include/c++/13/bits/std_mutex.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
@@ -881,6 +905,8 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: /home/sergillam/development/udacity/Cpp
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
+  /usr/include/c++/13/bits/unique_lock.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
@@ -889,20 +915,25 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: /home/sergillam/development/udacity/Cpp
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
+  /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/exception \
+  /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
   /usr/include/c++/13/ext/atomicity.h \
+  /usr/include/c++/13/ext/concurrence.h \
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/future \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
@@ -910,6 +941,7 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: /home/sergillam/development/udacity/Cpp
   /usr/include/c++/13/istream \
   /usr/include/c++/13/limits \
   /usr/include/c++/13/math.h \
+  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/numeric \
   /usr/include/c++/13/ostream \
@@ -917,6 +949,7 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: /home/sergillam/development/udacity/Cpp
   /usr/include/c++/13/pstl/glue_numeric_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/random \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
   /usr/include/c++/13/streambuf \
@@ -1540,17 +1573,23 @@ CMakeFiles/SnakeGame.dir/src/score_manager.cpp.o: /home/sergillam/development/ud
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/c++/13/algorithm \
+  /usr/include/c++/13/atomic \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
   /usr/include/c++/13/bits/algorithmfwd.h \
   /usr/include/c++/13/bits/alloc_traits.h \
+  /usr/include/c++/13/bits/allocated_ptr.h \
   /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/atomic_base.h \
+  /usr/include/c++/13/bits/atomic_futex.h \
+  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
   /usr/include/c++/13/bits/basic_ios.h \
   /usr/include/c++/13/bits/basic_ios.tcc \
   /usr/include/c++/13/bits/basic_string.h \
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/codecvt.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
@@ -1578,14 +1617,20 @@ CMakeFiles/SnakeGame.dir/src/score_manager.cpp.o: /home/sergillam/development/ud
   /usr/include/c++/13/bits/new_allocator.h \
   /usr/include/c++/13/bits/ostream.tcc \
   /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/shared_ptr.h \
+  /usr/include/c++/13/bits/shared_ptr_base.h \
   /usr/include/c++/13/bits/sstream.tcc \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/std_function.h \
+  /usr/include/c++/13/bits/std_mutex.h \
+  /usr/include/c++/13/bits/std_thread.h \
   /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
@@ -1603,7 +1648,10 @@ CMakeFiles/SnakeGame.dir/src/score_manager.cpp.o: /home/sergillam/development/ud
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/this_thread_sleep.h \
   /usr/include/c++/13/bits/uniform_int_dist.h \
+  /usr/include/c++/13/bits/unique_lock.h \
+  /usr/include/c++/13/bits/unique_ptr.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
@@ -1611,35 +1659,45 @@ CMakeFiles/SnakeGame.dir/src/score_manager.cpp.o: /home/sergillam/development/ud
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
+  /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
   /usr/include/c++/13/exception \
+  /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
   /usr/include/c++/13/ext/atomicity.h \
+  /usr/include/c++/13/ext/concurrence.h \
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/fstream \
+  /usr/include/c++/13/future \
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/istream \
+  /usr/include/c++/13/limits \
+  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_algorithm_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
   /usr/include/c++/13/system_error \
+  /usr/include/c++/13/thread \
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
@@ -1654,6 +1712,7 @@ CMakeFiles/SnakeGame.dir/src/score_manager.cpp.o: /home/sergillam/development/ud
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/time.h \
@@ -1678,6 +1737,8 @@ CMakeFiles/SnakeGame.dir/src/score_manager.cpp.o: /home/sergillam/development/ud
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
@@ -1739,7 +1800,8 @@ CMakeFiles/SnakeGame.dir/src/score_manager.cpp.o: /home/sergillam/development/ud
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
 CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/snake.cpp \
   /home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/snake.h \
@@ -2119,6 +2181,8 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/c++/13/pstl/glue_algorithm_defs.h:
 
+/usr/include/c++/13/bits/this_thread_sleep.h:
+
 /usr/include/c++/13/bits/stl_tempbuf.h:
 
 /usr/include/c++/13/bits/stl_heap.h:
@@ -2131,17 +2195,27 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/c++/13/bits/codecvt.h:
 
+/usr/include/c++/13/ratio:
+
+/usr/include/c++/13/mutex:
+
+/usr/include/c++/13/ext/concurrence.h:
+
+/usr/include/c++/13/ext/aligned_buffer.h:
+
+/usr/include/c++/13/ctime:
+
+/usr/include/c++/13/bits/shared_ptr.h:
+
+/usr/include/c++/13/bits/atomic_futex.h:
+
+/usr/include/c++/13/bits/atomic_base.h:
+
+/usr/include/c++/13/atomic:
+
+/usr/include/c++/13/bits/atomic_lockfree_defines.h:
+
 /home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/main.cpp:
-
-/usr/include/c++/13/pstl/glue_numeric_defs.h:
-
-/usr/include/c++/13/pstl/execution_defs.h:
-
-/usr/include/c++/13/random:
-
-/usr/include/c++/13/bits/random.tcc:
-
-/home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/game.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/xtestintrin.h:
 
@@ -2168,10 +2242,6 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
-
-/usr/include/c++/13/numeric:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h:
 
@@ -2217,9 +2287,7 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/bmi2intrin.h:
 
-/usr/include/c++/13/bits/random.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avxintrin.h:
+/usr/include/c++/13/thread:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avxifmaintrin.h:
 
@@ -2295,17 +2363,21 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/usr/include/c++/13/debug/assertions.h:
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
-/usr/include/c++/13/cstdlib:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/usr/include/c++/13/cstdio:
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/usr/include/c++/13/cstddef:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/c++/13/cerrno:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+
+/usr/include/c++/13/bits/unique_ptr.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -2321,9 +2393,7 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
-/usr/include/c++/13/bits/stl_vector.h:
-
-/usr/include/SDL2/SDL_error.h:
+/usr/include/c++/13/bits/stringfwd.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/clzerointrin.h:
 
@@ -2341,6 +2411,18 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/c++/13/system_error:
 
+/usr/include/c++/13/bits/stl_vector.h:
+
+/usr/include/SDL2/SDL_error.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxintrin.h:
+
+/usr/include/c++/13/bits/random.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124fmapsintrin.h:
+
+/usr/include/SDL2/SDL_main.h:
+
 /usr/include/c++/13/bits/ptr_traits.h:
 
 /usr/include/c++/13/bits/predefined_ops.h:
@@ -2355,10 +2437,6 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
-/usr/include/c++/13/bits/ostream_insert.h:
-
-/usr/include/c++/13/math.h:
-
 /usr/include/c++/13/bits/ostream.tcc:
 
 /home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/score_manager.cpp:
@@ -2370,6 +2448,8 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 /usr/include/SDL2/SDL_stdinc.h:
 
 /usr/include/c++/13/bits/memoryfwd.h:
+
+/usr/include/c++/13/bits/shared_ptr_base.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/enqcmdintrin.h:
 
@@ -2385,11 +2465,15 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/c++/13/bits/istream.tcc:
 
+/usr/include/c++/13/cstdio:
+
 /usr/include/c++/13/bits/exception.h:
 
 /usr/include/c++/13/bits/memory_resource.h:
 
 /usr/include/c++/13/streambuf:
+
+/usr/include/c++/13/condition_variable:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
@@ -2410,6 +2494,8 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniintrin.h:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
+
+/usr/include/c++/13/bits/std_mutex.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/prfchiintrin.h:
 
@@ -2437,9 +2523,13 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/c++/13/tr1/poly_laguerre.tcc:
 
+/usr/include/c++/13/bits/chrono.h:
+
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/c++/13/bits/basic_ios.tcc:
+
+/usr/include/c++/13/pstl/execution_defs.h:
 
 /usr/include/c++/13/bits/basic_ios.h:
 
@@ -2509,6 +2599,10 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/SDL2/SDL_gamecontroller.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/13/include/rdseedintrin.h:
 
 /usr/include/SDL2/SDL_config.h:
@@ -2517,6 +2611,10 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/SDL2/SDL_cpuinfo.h:
 
+/usr/include/c++/13/bits/invoke.h:
+
+/usr/include/SDL2/SDL_pixels.h:
+
 /usr/include/SDL2/SDL_events.h:
 
 /usr/include/c++/13/istream:
@@ -2524,6 +2622,24 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/13/fstream:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h:
+
+/usr/include/SDL2/SDL_mouse.h:
+
+/usr/include/c++/13/bits/hash_bytes.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/serializeintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectvlintrin.h:
+
+/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+
+/usr/include/asm-generic/errno-base.h:
 
 /usr/include/SDL2/SDL_hidapi.h:
 
@@ -2539,7 +2655,23 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
+/usr/include/c++/13/bits/ostream_insert.h:
+
+/usr/include/c++/13/bits/unique_lock.h:
+
+/usr/include/c++/13/math.h:
+
+/home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/game.h:
+
+/usr/include/c++/13/cstddef:
+
 /usr/include/SDL2/SDL_joystick.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+
+/usr/include/c++/13/numeric:
+
+/usr/include/c++/13/bits/std_function.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
 
@@ -2547,29 +2679,21 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/SDL2/SDL_touch.h:
 
+/usr/include/c++/13/bits/allocated_ptr.h:
+
+/usr/include/c++/13/bit:
+
+/usr/include/c++/13/bits/basic_string.tcc:
+
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlbwintrin.h:
 
 /usr/include/c++/13/bits/locale_facets.h:
 
 /usr/include/SDL2/SDL.h:
 
-/home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/renderer.h:
-
-/usr/include/c++/13/bits/std_abs.h:
-
-/usr/include/SDL2/SDL_misc.h:
-
 /usr/include/SDL2/SDL_assert.h:
 
 /usr/include/stdlib.h:
-
-/usr/include/c++/13/bits/functional_hash.h:
-
-/usr/include/SDL2/SDL_endian.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124fmapsintrin.h:
-
-/usr/include/SDL2/SDL_main.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/cetintrin.h:
 
@@ -2579,27 +2703,9 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/SDL2/SDL_audio.h:
 
-/usr/include/c++/13/fstream:
+/usr/include/c++/13/bits/functional_hash.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h:
-
-/usr/include/SDL2/SDL_mouse.h:
-
-/usr/include/c++/13/bits/hash_bytes.h:
-
-/usr/include/c++/13/cstdint:
-
-/usr/include/SDL2/SDL_mutex.h:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/serializeintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectvlintrin.h:
-
-/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
-
-/usr/include/asm-generic/errno-base.h:
+/usr/include/SDL2/SDL_endian.h:
 
 /usr/include/SDL2/SDL_metal.h:
 
@@ -2612,10 +2718,6 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 /usr/lib/gcc/x86_64-linux-gnu/13/include/smmintrin.h:
 
 /usr/include/SDL2/SDL_platform.h:
-
-/usr/include/SDL2/SDL_gamecontroller.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/c++/13/clocale:
 
@@ -2638,6 +2740,12 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 /usr/include/c++/13/bits/vector.tcc:
 
 /usr/include/SDL2/SDL_rwops.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bwintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/c++/13/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
@@ -2667,39 +2775,57 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/SDL2/SDL_timer.h:
 
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
 /usr/include/c++/13/cctype:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/c++/13/ext/atomicity.h:
 
 /usr/include/c++/13/tr1/gamma.tcc:
 
-/usr/include/c++/13/bit:
+/usr/include/strings.h:
 
-/usr/include/c++/13/bits/basic_string.tcc:
-
-/usr/include/c++/13/cwctype:
-
-/usr/include/SDL2/SDL_version.h:
-
-/usr/include/SDL2/begin_code.h:
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/c++/13/bits/charconv.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
+/usr/include/c++/13/bits/parse_numbers.h:
+
+/usr/include/c++/13/bits/std_abs.h:
+
+/usr/include/SDL2/SDL_misc.h:
+
+/home/sergillam/development/udacity/CppND-Capstone-Snake-Game/src/renderer.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h:
+
+/usr/include/SDL2/SDL_rect.h:
+
+/usr/include/c++/13/ext/type_traits.h:
+
 /usr/include/alloca.h:
+
+/usr/include/c++/13/backward/binders.h:
+
+/usr/include/SDL2/SDL_mutex.h:
+
+/usr/include/c++/13/cstdint:
+
+/usr/include/c++/13/cstdlib:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/c++/13/cwchar:
 
-/usr/include/c++/13/bits/stringfwd.h:
+/usr/include/SDL2/SDL_version.h:
 
-/usr/include/c++/13/backward/binders.h:
+/usr/include/SDL2/begin_code.h:
 
-/usr/include/c++/13/bits/invoke.h:
+/usr/include/c++/13/cwctype:
 
-/usr/include/SDL2/SDL_pixels.h:
+/usr/include/c++/13/debug/assertions.h:
 
 /usr/include/c++/13/exception:
 
@@ -2713,6 +2839,12 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/inttypes.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/c++/13/bits/stl_iterator.h:
+
+/usr/include/c++/13/ext/numeric_traits.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16intrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
@@ -2721,12 +2853,6 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/c++/13/ext/string_conversions.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h:
-
-/usr/include/SDL2/SDL_rect.h:
-
-/usr/include/c++/13/ext/type_traits.h:
-
 /usr/include/c++/13/ios:
 
 /usr/include/c++/13/iostream:
@@ -2734,6 +2860,12 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/c++/13/limits:
+
+/usr/include/c++/13/pstl/glue_numeric_defs.h:
+
+/usr/include/c++/13/bits/random.tcc:
+
+/usr/include/c++/13/random:
 
 /usr/include/c++/13/pstl/pstl_config.h:
 
@@ -2750,6 +2882,8 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 /usr/include/c++/13/string:
 
 /usr/include/features-time64.h:
+
+/usr/include/c++/13/bits/std_thread.h:
 
 /usr/include/c++/13/initializer_list:
 
@@ -2771,12 +2905,6 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/c++/13/tr1/modified_bessel_func.tcc:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bwintrin.h:
-
-/usr/include/c++/13/bits/exception_defines.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2intrin.h:
 
 /usr/include/c++/13/tr1/poly_hermite.tcc:
@@ -2796,6 +2924,8 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 /usr/include/SDL2/SDL_gesture.h:
 
 /usr/include/ctype.h:
+
+/usr/include/c++/13/future:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h:
 
@@ -2831,17 +2961,7 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/string.h:
 
-/usr/include/strings.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
 /usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/c++/13/bits/stl_iterator.h:
-
-/usr/include/c++/13/ext/numeric_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
@@ -2901,11 +3021,7 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
@@ -2914,11 +3030,3 @@ CMakeFiles/SnakeGame.dir/src/snake.cpp.o: /home/sergillam/development/udacity/Cp
 /usr/include/asm-generic/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-
-/usr/include/c++/13/ext/atomicity.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:

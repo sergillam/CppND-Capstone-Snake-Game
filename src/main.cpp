@@ -39,7 +39,7 @@ float AskInitialSpeed() {
         case 1:  return 0.07f; // Slow
         case 2:  return 0.10f; // Medium
         case 3:  return 0.16f; // Fast
-        default: return 0.10f; // Never happens
+        default: return 0.10f; // Should never happen
     }
 }
 
@@ -55,7 +55,7 @@ Difficulty AskDifficulty() {
         case 1: return Difficulty::Easy;
         case 2: return Difficulty::Medium;
         case 3: return Difficulty::Hard;
-        default: return Difficulty::Medium; // Never happens
+        default: return Difficulty::Medium; // Should never happen
     }
 }
 
@@ -95,32 +95,36 @@ int main() {
 
     bool running = true;
     while (running) {
-        // 6. Crie o Game a cada rodada
+        // 6. Create a new Game each round
         Game game(kGridWidth, kGridHeight, playerName, initialSpeed, numObstacles);
 
-        // 7. Rode o jogo
+        // 7. Run the game
         game.Run(controller, renderer, kMsPerFrame);
 
-        // 8. Salve o score
+        // 8. Save the final score
         int final_score = game.GetScore();
         scoreManager.AddScore(playerName, final_score);
 
-        // 9. Mostre ranking
+        // 9. Save scores asynchronously and wait for completion (optional)
+        auto fut = scoreManager.SaveScoresAsync();
+        fut.wait();
+
+        // 10. Show ranking
         auto topScores = scoreManager.GetHighScores();
         std::cout << "\n===== Top Scores Ranking =====\n";
         for (const auto& entry : topScores) {
             std::cout << entry.name << ": " << entry.score << std::endl;
         }
 
-        // 10. Mensagem visual "GAME OVER" + instruções
+        // 11. Visual "GAME OVER" message + instructions
         renderer.RenderGameOverMessageWithInstructions();
 
-        // 11. Espera pelo input do usuário: R = restart, Q = quit
+        // 12. Wait for user input: R = restart, Q = quit
         char action = renderer.WaitRestartOrQuit();
         if (action == 'q') {
             running = false;
         }
-        // Se 'r', apenas reinicia o loop (novo jogo com mesmas configs)
+        // If 'r', loop restarts and a new game is created with the same settings
     }
     return 0;
 }

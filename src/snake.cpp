@@ -73,3 +73,76 @@ Snake::Snake(std::size_t grid_width, std::size_t grid_height, float initial_spee
       head_y(grid_height / 2),
       speed(initial_speed){
 }
+
+// Copy constructor
+Snake::Snake(const Snake& other)
+    : grid_width(other.grid_width),
+      grid_height(other.grid_height),
+      head_x(other.head_x),
+      head_y(other.head_y),
+      speed(other.speed),
+      direction(other.direction),
+      size(other.size),
+      alive(other.alive),
+      growing(other.growing),
+      body(other.body) {}
+
+// Move constructor
+Snake::Snake(Snake&& other) noexcept
+    : grid_width(other.grid_width),
+      grid_height(other.grid_height),
+      head_x(other.head_x),
+      head_y(other.head_y),
+      speed(other.speed),
+      direction(other.direction),
+      size(other.size),
+      alive(other.alive),
+      growing(other.growing),
+      body(std::move(other.body)) {
+  // Reset other's state if necessary
+  other.size = 0;
+  other.alive = false;
+  other.growing = false;
+}
+
+// Move assignment
+Snake& Snake::operator=(Snake&& other) noexcept {
+  if (this == &other) return *this;
+  grid_width = other.grid_width;
+  grid_height = other.grid_height;
+  head_x = other.head_x;
+  head_y = other.head_y;
+  speed = other.speed;
+  direction = other.direction;
+  size = other.size;
+  alive = other.alive;
+  growing = other.growing;
+  body = std::move(other.body);
+
+  other.size = 0;
+  other.alive = false;
+  other.growing = false;
+
+  return *this;
+}
+
+// Destructor
+Snake::~Snake() {
+  // Nothing special needed; vector cleans up automatically
+}
+
+// Copy assignment
+Snake& Snake::operator=(const Snake& other) {
+  if (this == &other) return *this;
+  grid_width = other.grid_width;
+  grid_height = other.grid_height;
+  head_x = other.head_x;
+  head_y = other.head_y;
+  speed = other.speed;
+  direction = other.direction;
+  size = other.size;
+  growing = other.growing;
+  alive = other.alive;
+  body = other.body;  // vector copy
+  return *this;
+}
