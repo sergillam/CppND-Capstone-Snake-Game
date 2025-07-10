@@ -4,6 +4,9 @@
 #include <random>
 #include <string>
 #include <vector>
+#include <thread>
+#include <mutex>
+#include <condition_variable>
 #include "SDL.h"
 #include "controller.h"
 #include "renderer.h"
@@ -40,6 +43,11 @@ class Game {
  private:
   Snake snake;
   Food food;
+  Food bonus_food;
+  bool bonus_food_active{false};
+  std::thread bonus_food_thread;
+  std::mutex bonus_mutex;
+  std::condition_variable bonus_cv;
 
   std::random_device dev;
   std::mt19937 engine;
@@ -56,6 +64,9 @@ class Game {
   void PlaceFood();
   void Update();
   void PlaceObstacles();
+  void StartBonusFoodThread();
+  void BonusFoodTimer();
+  void PlaceBonusFood();
   
   int speed_timer{0};
   float speed_effect{1.0f};

@@ -103,15 +103,16 @@ void Game::Update() {
 
     int new_x = static_cast<int>(snake.head_x);
     int new_y = static_cast<int>(snake.head_y);
-// Após atualizar a posição da Snake:
-  for (const auto& obs : obstacles) {
-      if (new_x == obs.x && new_y == obs.y) {
-          snake.alive = false;
-          break;
-      }
-  }
 
-    // Check if there's food over here
+    // Checa colisão com obstáculos
+    for (const auto& obs : obstacles) {
+        if (new_x == obs.x && new_y == obs.y) {
+            snake.alive = false;
+            break;
+        }
+    }
+
+    // Checa se pegou comida normal
     if (food.pos.x == new_x && food.pos.y == new_y) {
         switch (food.type) {
             case FoodType::Normal:
@@ -137,6 +138,24 @@ void Game::Update() {
                 break;
         }
         PlaceFood();
+    }
+
+    // Checa se pegou a comida bônus (thread, mutex, condition_variable)
+    {
+        std::lock_guard<std::mutex> lock(bonus_mutex);
+        if (bonus_food_active && bonus_food.pos.x == new_x && bonus_food.pos.y == new_y) {
+            score += 10; // valor do bônus, pode ajustar
+            bonus_food_active = false;
+            bonus_cv.notify_all();
+            // Remove bônus do grid
+            bonus_food.pos.x = -1;
+            bonus_food.pos.y = -1;
+        }
+    }
+
+    // Ativa o bônus a cada 10 pontos (pode ajustar a regra)
+    if (score > 0 && score % 10 == 0 && !bonus_food_active) {
+        StartBonusFoodThread();
     }
 
     // Reseta efeito temporário de velocidade, se necessário
@@ -176,3 +195,46 @@ void Game::PlaceObstacles() {
 
 int Game::GetScore() const { return score; }
 int Game::GetSize() const { return snake.size; }
+
+void Game::StartBonusFoodThread() {
+    if (bonus_food_active) return; // Já existe um bônus ativo
+    PlaceBonusFood();
+    bonus_food_active = true;
+    // Thread controlando tempo de vida do bônus
+    bonus_food_thread = std::thread(&Game::BonusFoodTimer, this);
+    bonus_food_thread.detach(); // Pode ser join se quiser controlar o ciclo
+}
+
+void Game::BonusFoodTimer() {
+    std::unique_lock<std::mutex> lock(bonus_mutex);
+    if (bonus_cv.wait_for(lock, std::chrono::seconds(15), [this](){ return !bonus_food_active; })) {
+        // Comida bônus foi consumida, thread encerra
+        return;
+    }
+    // Tempo acabou, remover comida bônus
+    bonus_food_active = false;
+    // Opcional: resetar posição para fora do grid
+    bonus_food.pos.x = -1;
+    bonus_food.pos.y = -1;
+}
+
+void Game::PlaceBonusFood() {
+    std::lock_guard<std::mutex> lock(bonus_mutex);
+    int x, y;
+    while (true) {
+        x = random_w(engine);
+        y = random_h(engine);
+        // Garante que não ocupa comida normal, obstáculos ou snake
+        if (!snake.SnakeCell(x, y) && !(food.pos.x == x && food.pos.y == y)) {
+            bool conflict = false;
+            for (const auto& obs : obstacles)
+                if (obs.x == x && obs.y == y)
+                    conflict = true;
+            if (!conflict)
+                break;
+        }
+    }
+    bonus_food.pos.x = x;
+    bonus_food.pos.y = y;
+    bonus_food.type = FoodType::SpecialScore; // Ou um tipo novo se quiser
+}
